@@ -19,7 +19,7 @@ rr_p: driver.o list.o CPU.o schedule_rr_p.o
 	$(CC) $(CFLAGS) -o rr_p driver.o schedule_rr_p.o list.o CPU.o
 
 edf: driver.o list.o CPU.o schedule_edf.o
-	$(CC) $(CFLAGS) -o edf driver.o schedule_edf.o list.o CPU.o
+	$(CC) $(CFLAGS) -o edf driver.o schedule_edf.o list.o CPU.o -lpthread
 
 pa: driver.o list.o CPU.o schedule_pa.o
 	$(CC) $(CFLAGS) -o pa driver.o schedule_pa.o list.o CPU.o
